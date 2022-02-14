@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+//Components
+import Form from './components/Form';
 
 function App() {
+  //general info state
+  const [general, setgeneral] = useState({
+    firstName: '',
+    lastName: '',
+    age: '',
+    email: '',
+    phone: '',
+  })
+  //education info state
+  const [edu, setEdu] = useState({
+    new: {
+      schoolName: '',
+      title: '',
+    },
+    eduArr: [],
+  })
+  //work exp info state
+  const [experience, setExperience] = useState({
+    new: {
+      company: '',
+      jobTitle: '',
+      jobDescription: '',
+    },
+    expArr: [],
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form />
     </div>
   );
 }
