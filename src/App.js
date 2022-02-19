@@ -1,12 +1,16 @@
 import './App.css';
 import React, {useState} from 'react';
 //Components
-import Form from './components/Form';
+import Main from './components/Main';
+import Tabs from './components/Tabs';
+//Styles
+import './styles/skeleton.css';
 
 function App() {
+  ////////////////////////////////////States////////////////////////////////////
   //general info state
-  const [general, setgeneral] = useState({
-    firstName: '',
+  const [general, setGeneral] = useState({
+    firstName: 'Treus',
     lastName: '',
     age: '',
     email: '',
@@ -29,12 +33,30 @@ function App() {
     },
     expArr: [],
   })
+  //tabs state
+  const [tabs, setTabs] = useState('tabGeneral');
 
+  ////////////////////////////////////Functions////////////////////////////////////
+
+  //Event function to render the correct tab on click
+  function handleTabClick(e) {
+    setTabs(e.target.id);
+  }
+
+  ////////////////////////////////////Return////////////////////////////////////
   return (
     <div className="App">
-      <Form />
+      <header className='App-header'>
+        CV Project
+      </header>
+      <Tabs handleTabClick={handleTabClick}/>
+      <Main tabs={tabs} formsObj={{general, edu, experience}} setsObj={{setGeneral, setEdu, setExperience}}/>
     </div>
   );
 }
 
 export default App;
+
+//Header component
+//Tabs component, which has 4 clickable tabs (general, edu, exp, preview)
+//Main, which renders different things depending on the tab

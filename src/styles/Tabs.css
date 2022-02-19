@@ -1,0 +1,32 @@
+#tabsContainer {
+    display: flex;
+    background-color: rgb(233, 246, 246);
+}
+
+.tabStyle {
+    padding: 10px;
+    border-top-right-radius: 10px;
+    user-select: none;
+}
+
+#tabGeneral {
+    border: solid 2px #F78B9E;
+    border-left: solid 10px #F78B9E; 
+    background-color: #f7dee2;
+}
+#tabEdu {
+    border: solid 2px #F7DE80;
+    border-left: solid 10px #F7DE80; 
+    background-color: #f8f0d2;
+}
+#tabExp {
+    border: solid 2px #78B86C;
+    border-left: solid 10px #78B86C; 
+    background-color: #c1e9ba;
+}
+#tabCvPreview {
+    border: solid 2px #8484CF;
+    border-left: solid 10px #8484CF; 
+    background-color: #bebee7;
+}
+
