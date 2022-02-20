@@ -12,7 +12,7 @@ function CV({formsObj}) {
             </div>
             <div id='bottomInfo'>
                 <h4>Summary</h4>
-                <p>loremloremloremmmmmmmmmmmmmmmmmmmmmmm loremloremloremmmmmmmmmmmmmmmmmmmmmmm loremloremloremmmmmmmmmmmmmmmmmmmmmmm loremloremloremmmmmmmmmmmmmmmmmmmmmmm</p>
+                <p>{formsObj.summary}</p>
                 
                 <h4 id='eduH4'>Education</h4>
                     {formsObj.edu.eduArr.map(elem => 
@@ -31,7 +31,8 @@ function CV({formsObj}) {
                 
                 <h4>Extra Skills</h4>
                 <ul>
-                    {formsObj.skills.map(elem => <li>{elem}</li>)}
+                    {formsObj.general.skills.map(elem => 
+                        <li>{elem}</li>)}
                 </ul>
             </div>
         </div>

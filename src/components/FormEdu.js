@@ -24,7 +24,7 @@ function FormEdu({setFunction, eduState}) {
                     <label htmlFor='titleAquired'>Title</label>
                     <input type='text' id='titleAquired' name='titleAquired'/>
 
-                    <button id='submitBtn' className='btn'>SUBMIT</button>
+                    <button id='submitBtn' className='btn'>ADD</button>
                 </div>
             </form>
         </div>

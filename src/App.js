@@ -15,6 +15,7 @@ function App() {
     birthday: '1991-29-03',
     email: 'johnsmith777@gmail.com',
     phone: '+011 123456 789',
+    skills: ['Intermediate Japanese', 'Top English', 'Amazing dacing steps'],
   })
   //education info state
   const [edu, setEdu] = useState({
@@ -31,13 +32,12 @@ function App() {
       jobTitle: '',
       jobDescription: '',
     },
-    expArr: [{company: 'My dad', jobTitle: 'Glorified Asistant', jobDescription: 'Cook meals, clean the house, mow the lawn, take care of the pets'},
+    expArr: [{company: 'Family Business', jobTitle: 'Glorified Asistant', jobDescription: 'Cook meals, clean the house, mow the lawn, take care of the pets'},
             {company: 'McDonalds', jobTitle: 'Burger Maker', jobDescription: 'Cook and cleaning duties'},
             {company: 'Google', jobTitle: 'CEO', jobDescription: 'Make sure everything works as intended'}],
   })
-  //skills info state
-  const [skills, setSkills] = useState(['Top level English', 'Intermediate Japanese', 'Amazing dancing steps'])
-
+  //summary state
+  const [summary, setSummary] = useState('loremloremlorem loremlorem loremloremlorem loremlorem loremloremlorem loremlorem loremloremlorem loremlorem loremloremlorem loremlorem loremloremlorem loremlorem ');
   //tabs state
   const [tabs, setTabs] = useState('tabCvPreview');
 
@@ -55,7 +55,7 @@ function App() {
         CV Project
       </header>
       <Tabs handleTabClick={handleTabClick}/>
-      <Main tabs={tabs} formsObj={{general, edu, experience, skills}} setsObj={{setGeneral, setEdu, setExperience}}/>
+      <Main tabs={tabs} formsObj={{general, summary, edu, experience}} setsObj={{setGeneral, setSummary, setEdu, setExperience}}/>
     </div>
   );
 }
@@ -63,5 +63,3 @@ function App() {
 export default App;
 
 //Header component
-//Tabs component, which has 4 clickable tabs (general, edu, exp, preview)
-//Main, which renders different things depending on the tab
