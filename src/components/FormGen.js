@@ -8,7 +8,7 @@ function FormGen({setFunction}) {
         for (let elem of formData.entries()) {
             tempObj[elem[0]] = elem[1];
         }
-        setFunction(tempObj)
+        setFunction(tempObj);
     }
     return(
         <div id='formContainer'>
@@ -19,8 +19,8 @@ function FormGen({setFunction}) {
                     <label htmlFor='lastName'>Last Name</label>
                     <input type='text' id='lastName' name='lastName'/>
 
-                    <label htmlFor='age'>Age</label>
-                    <input type='number' id='age' name='age'/>
+                    <label htmlFor='birthday'>Birthday</label>
+                    <input type='date' id='birthday' name='birthday'/>
                     <label htmlFor='email'>Email</label>
                     <input type='email' id='email' name='email'/>
 
