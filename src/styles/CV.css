@@ -24,10 +24,6 @@ h4 {
     border-bottom: solid 2px #cacdcf;
 }
 
-h4:nth-child(1) {
-    margin-top: 0;
-}
-
 #cv {
     border: solid 2px black;
     width: 700px;
@@ -55,10 +51,26 @@ h4:nth-child(1) {
     margin-top: 0;
 }
 
+#summaryBlock h4 {
+    margin-top: 0;
+}
+
 .educationBlock, .experienceBlock {
     margin-top: 20px;
     padding-left: 10px;
 }
+
+.block {
+    position: relative;
+}
+
+.block:hover .btnEdit{
+    display: block;
+}
+.block:hover .btnDelete {
+    display: block;
+}
+
 
 
 

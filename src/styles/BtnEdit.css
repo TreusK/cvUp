@@ -1,0 +1,9 @@
+.btnEdit {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    display: none;
+    padding: 8px;
+}
