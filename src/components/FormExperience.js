@@ -1,30 +1,54 @@
 import '../styles/FormExperience.css';
 
-function FormExperience({setFunction, expState}) {
+function FormExperience({setFunction, expState, setEditing, editing, current}) {
     function handleSubmit(e) {   
-        e.preventDefault();
-        let tempObj = {};
-        let formData = new FormData(e.target);
-        for (let elem of formData.entries()) {
-            tempObj[elem[0]] = elem[1];
+        if(editing == false) {
+            e.preventDefault();
+            let tempObj = {};
+            let formData = new FormData(e.target);
+            for (let elem of formData.entries()) {
+                tempObj[elem[0]] = elem[1];
+            }
+            setFunction([...expState].concat([tempObj]))
+            e.target.reset();
+        } else {
+            e.preventDefault();
+            let tempObj = {};
+            let tempArr = [...expState];
+            let formData = new FormData(e.target);
+            for (let elem of formData.entries()) {
+                tempObj[elem[0]] = elem[1];
+            }
+            tempArr.splice(current, 1, tempObj);
+            setFunction(tempArr);
+
+            e.target.reset();
+            setEditing(false);
         }
-        setFunction({
-            ...expState,
-            expArr: expState.expArr.concat(tempObj)
-        });
-        e.target.reset();
     }
+
+    //Create an obj to fill the form with values (if editing) or empty (if not editing)
+    let editingObj;
+    if(editing) {
+        editingObj = {...expState[current]};
+    } else {
+        editingObj = {
+            company: '',
+            jobTitle: '',
+            jobDescription: '',
+        }
+    };
 
     return(
         <div id='formContainer'>
             <form onSubmit={handleSubmit} autoComplete='off'>
                 <div id='expForm'>
-                    <label htmlFor='companyName'>Company Name</label>
-                    <input type='text' id='companyName' name='companyName'/>
+                    <label htmlFor='company'>Company Name</label>
+                    <input type='text' id='company' name='company' defaultValue={editingObj.company}/>
                     <label htmlFor='jobTitle'>Job Title</label>
-                    <input type='text' id='jobTitle' name='jobTitle'/>
+                    <input type='text' id='jobTitle' name='jobTitle' defaultValue={editingObj.jobTitle}/>
                     <label htmlFor='jobDescription'>Job Description</label>
-                    <input type='text' id='jobDescription' name='jobDescription'/>
+                    <input type='text' id='jobDescription' name='jobDescription' defaultValue={editingObj.jobDescription}/>
 
                     <button id='submitBtn' className='btn'>ADD</button>
                 </div>

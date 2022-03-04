@@ -2,8 +2,13 @@
     width: 24px;
     height: 24px;
     position: absolute;
-    right: -50px;
+    right: -40px;
     top:0;
     display: none;
     padding: 8px;
+    border: solid 1px blue;
+}
+
+.btnDelete img {
+    pointer-events: none;
 }

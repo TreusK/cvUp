@@ -2,8 +2,13 @@
     width: 24px;
     height: 24px;
     position: absolute;
-    right: -20px;
+    right: 0px;
     top: 0;
     display: none;
     padding: 8px;
+    border: solid 1px red;
+}
+
+.btnEdit img {
+    pointer-events: none;
 }
