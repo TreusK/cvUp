@@ -6,9 +6,16 @@
     top:0;
     display: none;
     padding: 8px;
-    border: solid 1px blue;
+    border-radius: 5px;
+    transition: background 0.5s ease; 
+    user-select: none;
 }
 
 .btnDelete img {
     pointer-events: none;
+}
+
+.btnDelete:hover {
+    background-color: rgb(211, 150, 150);
+    transition: background 0.5s ease; 
 }

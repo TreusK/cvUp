@@ -2,12 +2,10 @@
   text-align: center;
 }
 
-header {
+.App-header {
   height: 100px;
-  background-color: azure;
+  background-color: #4E4E6A;
+  color: #F2F2F2;
 }
 
-.App-link {
-  color: #61dafb;
-}
 

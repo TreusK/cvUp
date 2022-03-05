@@ -72,7 +72,3 @@ function App() {
 
 export default App;
 
-//Header component
-//Idea: Hacer un "editing" state true/false. Cuand osubmiteas, lo pones falso siempre. Pero cuando editas lo pones en verdader. 
-//y las formas lo toman; si es verdadro populan los valores con un objeto q saco del estado, sino, con nada (algo tipo 
-// value={editing && obj.value})

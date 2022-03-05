@@ -1,37 +1,24 @@
 #tabsContainer {
     display: flex;
-    background-color: rgb(233, 246, 246);
+    background-color: #4E4E6A;
 }
 
 .tabStyle {
-    padding: 10px;
+    padding: 5px 10px;
     border-top-right-radius: 10px;
     user-select: none;
 }
 
-#tabGeneral {
-    border: solid 2px #F78B9E;
-    border-left: solid 10px #F78B9E; 
-    background-color: #f7dee2;
-}
-#tabSummary {
-    border: solid 2px #8bf7f2;
-    border-left: solid 10px #8bf7f2; 
-    background-color: #def7f6;
-}
-#tabEdu {
-    border: solid 2px #F7DE80;
-    border-left: solid 10px #F7DE80; 
-    background-color: #f8f0d2;
-}
-#tabExp {
-    border: solid 2px #78B86C;
-    border-left: solid 10px #78B86C; 
-    background-color: #c1e9ba;
-}
-#tabCvPreview {
-    border: solid 2px #8484CF;
-    border-left: solid 10px #8484CF; 
-    background-color: #bebee7;
+#tabGeneral, #tabSummary, #tabEdu, #tabExp, #tabCvPreview {
+    border: solid 2px #282836;
+    border-left: solid 10px #282836; 
+    background-color: #a0a1bd;
+    transition: border 0.5s ease, background 0.5s ease;
 }
 
+#tabGeneral:hover, #tabSummary:hover, #tabEdu:hover, #tabExp:hover, #tabCvPreview:hover  {
+    border: solid 2px #98939b;
+    border-left: solid 10px #98939b; 
+    background-color: #cec7c9;
+    transition: border 0.5s ease, background 0.5s ease;
+}

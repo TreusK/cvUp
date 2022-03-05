@@ -26,7 +26,7 @@ function CV({formsObj, setsObj, editTab, current, setCurrent}) {
                     {formsObj.edu.map((elem, index) => 
                         <div className='educationBlock block'>
                             <p>{elem.schoolName}</p>
-                            <p>--{elem.title}</p>
+                            <p>.{elem.title}</p>
                             <div className='btnsContainer'>
                                 <BtnEdit goToTab={'tabEdu'} index={index} editTab={editTab} setCurrent={setCurrent}/>
                                 <BtnDelete index={index} stateArr={formsObj.edu} setFunction={setsObj.setEdu}/>
@@ -38,8 +38,8 @@ function CV({formsObj, setsObj, editTab, current, setCurrent}) {
                     {formsObj.experience.map((elem, index) => 
                         <div className='experienceBlock block'>
                             <p>{elem.company}</p>
-                            <p>--{elem.jobTitle}</p>
-                            <p>--{elem.jobDescription}</p>
+                            <p>.{elem.jobTitle}</p>
+                            <p>.{elem.jobDescription}</p>
                             <div className='btnsContainer'>
                                 <BtnEdit goToTab={'tabExp'} index={index} editTab={editTab} setCurrent={setCurrent}/>
                                 <BtnDelete index={index} stateArr={formsObj.experience} setFunction={setsObj.setExperience}/>

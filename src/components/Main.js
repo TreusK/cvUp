@@ -9,8 +9,8 @@ import CV from './CV';
 //editing - To know if a form is being edited and thus filled with values
 //tabs - The tabs state
 //editTabs - To go to certain tab automatically when editing
-//formsObj - An obj formed by the general, education and experience states
-//setsObj - An obj formed by the set function of each of those 3 states
+//formsObj - An obj formed by the states
+//setsObj - An obj formed by the set functions
 
 function Main({tabs, editing, editTab, formsObj, setsObj}) {
     return(
