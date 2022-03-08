@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cvUp/static/css/main.8321d7e6.css",
+    "main.js": "/cvUp/static/js/main.47479cb3.js",
+    "static/media/Montserrat-Regular.ttf": "/cvUp/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
+    "index.html": "/cvUp/index.html",
+    "main.8321d7e6.css.map": "/cvUp/static/css/main.8321d7e6.css.map",
+    "main.47479cb3.js.map": "/cvUp/static/js/main.47479cb3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8321d7e6.css",
+    "static/js/main.47479cb3.js"
+  ]
+}
