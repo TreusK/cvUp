@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       <header className='App-header'>
-        CV Project
+        <h3>CV Project</h3>
       </header>
       <Tabs handleTabClick={handleTabClick}/>
       <Main editing={editing} 

@@ -28,6 +28,7 @@ h4 {
     border: solid 2px black;
     width: 700px;
     margin: 0 auto;
+    font-family: 'Mons', serif;
 }
 
 #topInfo {
@@ -70,6 +71,7 @@ h4 {
 .block:hover .btnDelete {
     display: block;
 }
+
 
 
 

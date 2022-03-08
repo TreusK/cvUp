@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Mons';
+  src: local('Mons'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
 .App {
   text-align: center;
 }
@@ -7,5 +12,12 @@
   background-color: #4E4E6A;
   color: #F2F2F2;
 }
+
+.App-header h3 {
+  margin: 0;
+}
+
+
+
 
 
